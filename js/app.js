@@ -4,7 +4,7 @@
  */
 var MonsterModel = {
     currentMonster: null,
-    var index;
+    var index = 0;
   
    /* Collection of available monsters */
    collection : monsters, 
@@ -26,7 +26,21 @@ var MonsterModel = {
        }else{
            return MonsterModel.collection[thisIndex+1];
        }
-    }
+    },
+    /* Checks if the name of the current monster 
+    * is monsterName. It returns true if the user 
+    * correctly named the monster, false otherwise
+    */
+   catchMonster : function (monsterName){
+        var actual = MonsterModel.getCurrentMonster();
+       if(monsterName === actual.name[index]){
+          viewMonster.showWinMessage; 
+        } else{
+            viewMonster.showLostMessage
+        };
+       index+=1;
+   
+   }    
 };
 
 var viewMonster= {
