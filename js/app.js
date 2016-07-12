@@ -21,6 +21,7 @@ var MonsterModel = {
     */
    getCurrentMonster : function (PrevMonster) {
        var thisIndex = collection.indexOf(PrevMonster);
+       alert("into getCurrent");
        if (thisIndex===collection.length){
            return null;
        }else{
@@ -32,7 +33,7 @@ var MonsterModel = {
     * correctly named the monster, false otherwise
     */
    catchMonster : function (monsterName){
-        var actual = MonsterModel.getCurrentMonster();
+        var actual = MonsterModel.getCurrentMonster(MonsterModel.collection[index]);
        if(monsterName === actual.name[index]){
           viewMonster.showWinMessage; 
         } else{
