@@ -2,6 +2,8 @@
  * MonsterModel provides basic methods to iterate
  * over a collection of "monsters"  
  */
+
+// The function of sprint 2 not implemented this note to be read only for the merge operation
 var MonsterModel = {
     currentMonster: null,
     var index = 0;
